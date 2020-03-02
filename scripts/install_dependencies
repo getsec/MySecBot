@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pip install discord
+pip install boto3

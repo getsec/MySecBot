@@ -1,10 +1,12 @@
 import discord
 import os
-from dotenv import load_dotenv
-from commands.get_my_ip import ip
 
-load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
+from commands.get_my_ip import ip
+from commands.token import get_token
+
+
+
+TOKEN = get_token()
 client = discord.Client()
 
 def return_error():
@@ -26,7 +28,6 @@ async def on_message(message):
     else:
         await message.channel.send(return_error())
 
-def main():
-    client.run(TOKEN)
+client.run(TOKEN)
 
 
