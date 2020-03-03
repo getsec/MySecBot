@@ -1,10 +1,18 @@
 import discord
 import os
+import watchtower
+import logging
 import json
+import random
 from commands.get_my_ip import ip
+from commands.names import friends
 from commands.token import get_token
 from commands.amazon import create_bucket
+from commands.amazon import create_shitty_sg
 from commands.amazon import teardown
+from commands.amazon import create_bad_iam_user
+
+
 TOKEN = get_token()
 client = discord.Client()
 
@@ -35,6 +43,14 @@ async def on_message(message):
     if message.content.startswith('!shitty'): 
         await message.channel.send("Doing something shitty, hopefully you can catch me. 👺")
 
+    if message.content.startswith('!sg'):
+        await message.channel.send("I'm gonna allow this instance open to the world!!!! MUAHAHAHA. 🖥")
+        create_shitty_sg()
+    
+    if message.content.startswith('!iam'):
+        await message.channel.send(f"Hey, my buddy {random.choice(friends)} wanted access to the account, so i created the following user for him. 👩🏽‍💻")
+        await message.channel.send(f"Username: {create_bad_iam_user()}")
+        await message.channel.send(f"Policy:   arn:aws:iam::aws:policy/AdministratorAccess")
     if message.content.startswith('!teardown'):
         teardown()
         await message.channel.send(f'Removing all shitty architecture 💩')

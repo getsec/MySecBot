@@ -1,0 +1,22 @@
+friends = [
+    "Merlene",
+    "Arlinda",
+    "TemekaDonka",
+    "DinkoKinko",
+    "Margaret Borda",
+    "Stacie Kurz",
+    "Dick Kickem",
+    "Chuck Cuckem",
+    "Kimiko Machnik",
+    "Dwayne Johnson",
+    "Rocky Baldonka",
+    "Cherelle Staats",
+    "Sarah Dickman",
+    "Jerry Billz",
+    "Caitlin Lauzon",
+    "Baldona Urbain",
+    "Chonk Press",
+    "Maris Lloyd",
+    "Mariette Sigmon",
+    "Christoper Sallee"
+]

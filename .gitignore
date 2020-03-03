@@ -1,2 +1,6 @@
 .env
 commands/__pycache__
+.venv
+.venv/*
+.vscode
+__pycache__
